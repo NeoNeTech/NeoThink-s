@@ -2,16 +2,32 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
-    <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'">
-    <title>Hello World!</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/dcebc26e56.js" crossorigin="anonymous"></script>
+    <title>NeoThink's</title>
   </head>
   <body>
-    <h1>Hello World!</h1>
-    We are using Node.js <span id="node-version"></span>,
-    Chromium <span id="chrome-version"></span>,
-    and Electron <span id="electron-version"></span>.
+    <div class="header" id="myDIV">
+      <a onclick="closeWindow()"><i class="fas fa-times" style="float: left; color: black;"> Fermer</i></a>
+      <i class="fas fa-arrows-alt" style="-webkit-app-region: drag; color: black; float: right;"> Bouger</i>
+      <br><hr>
+      <h2><i class="far fa-sticky-note"></i>   NeoThink's</h2>
+      <input type="text" id="myInput" placeholder="Ajouter une tâche ici">
+      <span onclick="newElement()" class="addBtn">Ajouter</span>
+    </div>
+
+    <script type="text/javascript">
+    function closeWindow(){
+      const remote = require('electron').remote
+      let w = remote.getCurrentWindow()
+      w.close()
+    }
+
+    </script>
+
+    <ul id="myUL"></ul>
+
+    <script src="list.js"></script>
 
     <!-- You can also require other files to run in this process -->
     <script src="./renderer.js"></script>

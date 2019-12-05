@@ -1,20 +1,19 @@
 {
-  "name": "electron-quick-start",
+  "name": "NeoThink-s",
   "version": "1.0.0",
-  "description": "A minimal Electron application",
+  "description": " Application type To do list fait avec Electron ",
   "main": "main.js",
   "scripts": {
     "start": "electron ."
   },
-  "repository": "https://github.com/electron/electron-quick-start",
+  "repository": "https://github.com/NeoNeTech/NeoThink-s",
   "keywords": [
     "Electron",
-    "quick",
-    "start",
-    "tutorial",
-    "demo"
+    "NeoThink-s",
+    "first",
+    "app"
   ],
-  "author": "GitHub",
+  "author": "Quentin LLOVERAS",
   "license": "CC0-1.0",
   "devDependencies": {
     "electron": "^7.1.3"

@@ -9,11 +9,27 @@ let mainWindow
 function createWindow () {
   // Create the browser window.
   mainWindow = new BrowserWindow({
-    width: 800,
-    height: 600,
+    width: 450,
+    height: 800,
+    show: false,
+    //icon: 'img/sticky-note-regular.png',
+    maximized: false,
+    center: true,
+    movable: true,
+    frame: false,
+    transparent: true,
+    resizable: true,
+    closable: true,
+    alwaysOnTop: true,
+    type: 'desktop',
     webPreferences: {
-      preload: path.join(__dirname, 'preload.js')
+      preload: path.join(__dirname, 'preload.js'),
+      nodeIntegration: true
     }
+  })
+
+  mainWindow.once('ready-to-show', () => {
+  mainWindow.show()
   })
 
   // and load the index.html of the app.
