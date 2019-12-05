@@ -1,6 +1,6 @@
 {
   "name": "NeoThink-s",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": " Application type To do list fait avec Electron ",
   "main": "main.js",
   "scripts": {
